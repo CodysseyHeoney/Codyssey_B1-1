@@ -13,13 +13,13 @@
 
 관련 코드:
 
-- [`index.html`의 문서 구조와 외부 파일 연결](index.html#L1-L9)
-- [`css/style.css` 파일](css/style.css#L1)
+- [`index.html`의 문서 구조와 외부 파일 연결](../index.html#L1-L9)
+- [`css/style.css` 파일](../css/style.css#L1)
 - [`js/main.js` 파일](js/main.js#L1)
 
 코드 위치 링크:
 
-- [HTML 문서에서 CSS·JavaScript를 연결하는 부분](index.html#L7-L8)
+- [HTML 문서에서 CSS·JavaScript를 연결하는 부분](../index.html#L7-L8)
 
 답변 정리:
 
@@ -34,9 +34,9 @@
 
 관련 코드:
 
-- [`header`와 `nav` 구조](index.html#L11-L22)
-- [`main`과 각 `section` 구조](index.html#L24-L95)
-- [`footer` 구조](index.html#L98-L101)
+- [`header`와 `nav` 구조](../index.html#L11-L22)
+- [`main`과 각 `section` 구조](../index.html#L24-L95)
+- [`footer` 구조](../index.html#L98-L101)
 
 답변 정리:
 

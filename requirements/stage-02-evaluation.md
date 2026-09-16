@@ -13,9 +13,9 @@
 
 관련 코드:
 
-- [`:root` 변수 정의](css/style.css#L3-L15)
-- [`data-theme="dark"` 변수 정의](css/style.css#L18-L24)
-- [`body`에서 CSS 변수 사용](css/style.css#L33-L38)
+- [`:root` 변수 정의](../css/style.css#L3-L15)
+- [`data-theme="dark"` 변수 정의](../css/style.css#L18-L24)
+- [`body`에서 CSS 변수 사용](../css/style.css#L33-L38)
 
 최종 정리 때 확인할 내용:
 
@@ -31,7 +31,7 @@
 
 관련 코드:
 
-- [Skills 목록 구조](index.html#L51-L59)
+- [Skills 목록 구조](../index.html#L51-L59)
 
 정리할 내용:
 
@@ -43,7 +43,7 @@
 
 관련 코드:
 
-- [임시 프로젝트 카드 구조](index.html#L64-L78)
+- [임시 프로젝트 카드 구조](../index.html#L64-L78)
 
 정리할 내용:
 
@@ -59,9 +59,9 @@
 
 현재 관련 코드:
 
-- [`header`와 `nav`의 Flexbox 적용](css/style.css#L68-L73)
-- [`Skills` 목록의 Flexbox 적용](css/style.css#L200-L207)
-- [`Projects` 카드 목록의 Grid 적용](css/style.css#L233-L238)
+- [`header`와 `nav`의 Flexbox 적용](../css/style.css#L68-L73)
+- [`Skills` 목록의 Flexbox 적용](../css/style.css#L200-L207)
+- [`Projects` 카드 목록의 Grid 적용](../css/style.css#L233-L238)
 
 최종 정리 때 비교할 내용:
 
@@ -73,12 +73,12 @@
 
 관련 코드:
 
-- [Skills 카드 기본 스타일](css/style.css#L209-L219)
-- [Skills 카드 hover 효과](css/style.css#L221-L224)
-- [Projects 카드 Grid](css/style.css#L233-L238)
-- [Projects 카드 기본 스타일과 hover 효과](css/style.css#L240-L257)
-- [Projects GitHub 링크 스타일](css/style.css#L259-L263)
-- [Projects 별 글꼴 스타일](css/style.css#L265-L268)
+- [Skills 카드 기본 스타일](../css/style.css#L209-L219)
+- [Skills 카드 hover 효과](../css/style.css#L221-L224)
+- [Projects 카드 Grid](../css/style.css#L233-L238)
+- [Projects 카드 기본 스타일과 hover 효과](../css/style.css#L240-L257)
+- [Projects GitHub 링크 스타일](../css/style.css#L259-L263)
+- [Projects 별 글꼴 스타일](../css/style.css#L265-L268)
 
 정리할 내용:
 
