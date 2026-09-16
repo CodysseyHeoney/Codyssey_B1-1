@@ -1,0 +1,308 @@
+/* 2단계-1: 전체 페이지 기본 설정 */
+
+:root {
+  --color-background: #f7f5f0;
+  --color-surface: #f0ede5;
+  --color-text: #292929;
+  --color-accent: #536f8d;
+  --color-border: #d5d0c7;
+  --color-card-shadow: #d6d0c5;
+  --font-main: "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  --font-logo: Baskerville, "Palatino Linotype", Georgia, serif;
+  --font-heading: Georgia, serif;
+  --space-small: 8px;
+  --space-medium: 16px;
+  --space-large: 32px;
+}
+
+[data-theme="dark"] {
+  --color-background: #222222;
+  --color-surface: #2d2d2d;
+  --color-text: #e8e4dc;
+  --color-accent: #718ba7;
+  --color-border: #454545;
+  --color-card-shadow: #171717;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  line-height: 1.5;
+}
+
+/* 2단계-2: 공통 레이아웃 */
+
+header > nav,
+main > section,
+footer {
+  width: min(100% - 32px, 1200px);
+  margin-inline: auto;
+}
+
+main > section {
+  padding: 32px 0 64px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+/* 2단계-3: header와 nav */
+
+header {
+  position: relative;
+  border-bottom: 0;
+}
+
+header::after {
+  position: absolute;
+  top: 52px;
+  right: 0;
+  left: 0;
+  border-bottom: 1px solid var(--color-border);
+  content: "";
+}
+
+header > nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+}
+
+header nav > a {
+  color: var(--color-accent);
+  font-family: var(--font-logo);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+header nav ul {
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header nav li a {
+  color: var(--color-text);
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+header nav li a:hover {
+  color: var(--color-accent);
+}
+
+/* 2단계-4: Hero */
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 60px + 32px);
+  padding: 96px 20px;
+  text-align: center;
+}
+
+#hero .hero-content {
+  max-width: 720px;
+}
+
+#hero .hero-content p:first-child {
+  margin: 0 0 16px;
+  font-size: 20px;
+}
+
+#hero h1 {
+  margin: 0 0 0px;
+  font-size: 56px;
+  line-height: 1.1;
+}
+
+#hero .hero-content p:last-child {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+#hero .hero-actions {
+  display: flex;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+#hero .hero-actions a {
+  color: var(--color-accent);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* 2단계-5: About */
+
+main > section > h2 {
+  margin-bottom: 32px;
+}
+
+#about img {
+  width: 300px;
+  height: 375px;
+  margin-left: 80px;
+  max-width: 100%;
+}
+
+#about > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+#about > div > div {
+  flex: 0 1 auto;
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 16px;
+  width: max-content;
+}
+
+#about > div > div p:first-child {
+  margin: 0 0 6px;
+  margin-left: -12px;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+#about > div > div p:last-child {
+  margin: 0;
+  padding-left: 0;
+  font-size: 13px;
+  line-height: 1.3;
+  text-align: right;
+}
+
+/* 2단계-6: Skills 목록 */
+
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-medium);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#skills li {
+  flex: 0 1 140px;
+  padding: 16px;
+  border-radius: 6px;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-family: Baskerville, "Palatino Linotype", Georgia, serif;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow: 2px 2px 0 var(--color-card-shadow);
+  text-align: center;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+#skills li:hover {
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 0 var(--color-card-shadow);
+}
+
+/* 2단계-7: Projects 임시 카드 Grid */
+
+#projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 280px));
+  justify-content: center;
+  gap: var(--space-large);
+}
+
+.project-card {
+  padding: 20px;
+  border-radius: 6px;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  text-align: center;
+  box-shadow: 2px 2px 0 var(--color-card-shadow);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 0 var(--color-card-shadow);
+}
+
+.project-card h3 {
+  margin-bottom: 4px;
+}
+
+.project-card a {
+  color: var(--color-accent);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.project-stars {
+  margin: 0 0 12px;
+  font-family: ui-rounded, sans-serif;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #about > div {
+    align-items: flex-end;
+  }
+
+  #about > div > div {
+    margin-bottom: 56px;
+  }
+}
+
+@media (max-width: 767px) {
+  #about > div {
+    gap: 16px;
+  }
+
+  #about img {
+    width: 150px;
+    height: 188px;
+    margin-left: 56px;
+  }
+
+  #about > div > div {
+    flex: 0 1 auto;
+    min-width: 0;
+    width: max-content;
+    max-width: 100%;
+    margin-left: 0;
+  }
+}

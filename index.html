@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav aria-label="주요 메뉴">
+      <a href="#hero">HeoNey</a>
+
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="hero-content">
+        <p>Hello, I am</p>
+        <h1>YeonJin</h1>
+        <p>초보개발자의 성장기</p>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#projects">View Projects</a>
+        <a href="#contact">Contact Me</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+
+      <div>
+        <img src="images/Cat2.png" alt="고양이 프로필 이미지">
+
+        <div>
+          <p>HeoNey_Jin</p>
+          <p>웹 개발 공부중</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div id="projects-container" aria-live="polite">
+        <article class="project-card">
+          <h3>codyssey-mission1</h3>
+          <p class="project-stars" aria-label="Stars 0개">☆</p>
+          <a href="https://github.com/CodysseyHeoney/codyssey-mission1">
+            GitHub에서 보기
+          </a>
+        </article>
+
+        <article class="project-card">
+          <h3>codyssey-mission2</h3>
+          <p class="project-stars" aria-label="Stars 0개">☆</p>
+          <a href="https://github.com/CodysseyHeoney/codyssey-mission2">
+            GitHub에서 보기
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <form id="contact-form">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required>
+          <small id="name-error"></small>
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+          <small id="email-error"></small>
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+          <small id="message-error"></small>
+        </div>
+
+        <button type="submit">Send Message</button>
+        <p id="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Your Name</p>
+    <a href="https://github.com/your-username">GitHub</a>
+  </footer>
+</body>
+</html>
