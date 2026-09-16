@@ -7,6 +7,7 @@
   --color-accent: #536f8d;
   --color-border: #d5d0c7;
   --color-card-shadow: #d6d0c5;
+  --color-card-background: #fffdf8;
   --font-main: "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   --font-logo: Baskerville, "Palatino Linotype", Georgia, serif;
   --font-heading: Georgia, serif;
@@ -22,6 +23,7 @@
   --color-accent: #718ba7;
   --color-border: #454545;
   --color-card-shadow: #171717;
+  --color-card-background: #303030;
 }
 
 *,
@@ -177,6 +179,7 @@ main > section > h2 {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: flex-end;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -242,33 +245,47 @@ main > section > h2 {
 
 #projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 280px));
+  grid-template-columns: repeat(auto-fit, minmax(130px, 160px));
   justify-content: center;
-  gap: var(--space-large);
+  gap: 48px;
 }
 
 .project-card {
+  width: 100%;
+  max-width: 160px;
+  min-height: 200px;
   padding: 20px;
   border-radius: 6px;
-  background-color: var(--color-surface);
+  background-color: var(--color-card-background);
   color: var(--color-text);
   text-align: center;
-  box-shadow: 2px 2px 0 var(--color-card-shadow);
+  box-shadow: 5px 5px 0 var(--color-card-shadow);
   transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.project-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 12px;
 }
 
 .project-card:hover {
   transform: translateY(-2px);
-  box-shadow: 3px 3px 0 var(--color-card-shadow);
+  box-shadow: 6px 6px 0 var(--color-card-shadow);
 }
 
 .project-card h3 {
+  font-family: "Nanum Brush Script", cursive;
+  font-size: 18px;
   margin-bottom: 4px;
 }
 
 .project-card a {
   color: var(--color-accent);
+  font-family: Baskerville, "Palatino Linotype", Georgia, serif;
   font-size: 14px;
+  font-style: italic;
   text-decoration: none;
 }
 
@@ -288,6 +305,16 @@ main > section > h2 {
 }
 
 @media (max-width: 767px) {
+  #projects-container {
+    grid-template-columns: repeat(2, 145px);
+    gap: 32px;
+  }
+
+  .project-card {
+    width: 145px;
+    max-width: none;
+  }
+
   #about > div {
     gap: 16px;
   }
