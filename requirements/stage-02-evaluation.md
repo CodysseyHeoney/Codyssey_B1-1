@@ -13,9 +13,9 @@
 
 관련 코드:
 
-- [`:root` 변수 정의](../css/style.css#L3-L16)
-- [`data-theme="dark"` 변수 정의](../css/style.css#L19-L26)
-- [`body`에서 CSS 변수 사용](../css/style.css#L35-L40)
+- [`:root` 변수 정의](../css/style.css#L3-L18)
+- [`data-theme="dark"` 변수 정의](../css/style.css#L20-L29)
+- [`body`에서 CSS 변수 사용](../css/style.css#L37-L42)
 
 최종 정리 때 확인할 내용:
 
@@ -31,7 +31,7 @@
 
 관련 코드:
 
-- [Skills 목록 구조](../index.html#L51-L59)
+- [Skills 목록 구조](../index.html#L63-L70)
 
 정리할 내용:
 
@@ -43,7 +43,7 @@
 
 관련 코드:
 
-- [임시 프로젝트 카드 구조](../index.html#L64-L78)
+- [프로젝트 카드 구조](../index.html#L73-L95)
 
 정리할 내용:
 
@@ -59,26 +59,28 @@
 
 현재 관련 코드:
 
-- [`header`와 `nav`의 Flexbox 적용](../css/style.css#L80-L85)
-- [`Skills` 목록의 Flexbox 적용](../css/style.css#L212-L220)
-- [`Projects` 카드 목록의 Grid 적용](../css/style.css#L245-L250)
+- [`header`와 `nav`의 Flexbox 적용](../css/style.css#L84-L89)
+- [`Skills` 목록의 Flexbox 적용](../css/style.css#L318-L326)
+- [`Projects` 카드 목록의 Grid 적용](../css/style.css#L352-L360)
+- [`Project` 카드 내부의 Grid 적용](../css/style.css#L362-L374)
 
 최종 정리 때 비교할 내용:
 
 - Flexbox는 한 방향의 로고·메뉴 정렬에 사용한 이유
 - Skills 목록은 한 줄 배치와 화면 폭에 따른 줄바꿈이 필요하므로 Flexbox를 사용한 이유
-- Grid는 Projects 카드처럼 행과 열을 함께 배치할 때 사용할 이유
+- Projects 컨테이너는 `auto-fit`, `minmax()`로 화면 너비에 맞춰 카드 열을 조정하기 위해 Grid를 사용한 이유
+- Project 카드 내부는 이미지·제목·별·링크를 행으로 정리하기 위해 Grid를 사용한 이유
 
 ### `requirement.md` 항목 1·2 - Skills 카드 시각 효과
 
 관련 코드:
 
-- [Skills 카드 기본 스타일](../css/style.css#L222-L236)
-- [Skills 카드 hover 효과](../css/style.css#L238-L241)
-- [Projects 카드 Grid](../css/style.css#L245-L250)
-- [Projects 카드 기본 스타일과 hover 효과](../css/style.css#L252-L269)
-- [Projects GitHub 링크 스타일](../css/style.css#L271-L275)
-- [Projects 별 글꼴 스타일](../css/style.css#L277-L280)
+- [Skills 카드 기본 스타일](../css/style.css#L328-L342)
+- [Skills 카드 hover 효과](../css/style.css#L344-L347)
+- [Projects 카드 Grid와 내부 Grid](../css/style.css#L349-L374)
+- [Projects 카드 기본 스타일과 hover 효과](../css/style.css#L362-L392)
+- [Projects GitHub 링크 스타일](../css/style.css#L400-L406)
+- [Projects 별 글꼴 스타일](../css/style.css#L408-L411)
 
 정리할 내용:
 
@@ -91,6 +93,7 @@
 - 네비게이션은 Flexbox를 사용하고 로고는 왼쪽, 메뉴는 오른쪽에 배치합니다.
 - CSS 변수로 색상·폰트·간격을 정의합니다.
 - 다크 모드용 CSS 변수를 별도로 정의합니다.
+- 모바일 기본 스타일을 먼저 작성하고 `min-width` 미디어 쿼리로 큰 화면을 확장합니다.
 - Projects 카드의 Grid, hover, transition, box-shadow는 임시 카드에 적용했습니다.
 
 ## 현재 단계 확인
@@ -102,7 +105,8 @@
 - [x] Skills 기술 목록을 `ul`과 `li`로 작성했는가?
 - [x] Skills 목록을 Flexbox로 가로 배치했는가?
 - [x] Skills 카드에 hover, transition, box-shadow를 적용했는가?
-- [x] Projects 카드에 Grid를 적용했는가?
+- [x] Projects 카드 목록에 `auto-fit`, `minmax()` Grid를 적용했는가?
+- [x] Projects 카드 내부에 Grid를 적용했는가?
 - [x] Projects 카드에 hover, transition, box-shadow를 적용했는가?
 - [ ] 버튼에 hover와 transition을 적용했는가?
 - [ ] 모바일·태블릿·데스크톱 반응형 규칙을 작성했는가?

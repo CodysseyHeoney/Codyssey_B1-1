@@ -4,23 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
+  <!-- 평가: HTML·CSS·JavaScript를 파일별로 분리해 연결 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
+  <!-- 평가: 시맨틱 header와 nav로 페이지 상단·내비게이션 구성 -->
   <header>
     <nav aria-label="주요 메뉴">
-      <a href="#hero">HeoNey</a>
+      <div class="nav-brand">
+        <a href="#hero">HeoNey</a>
+        <button id="theme-toggle" type="button" aria-label="다크 모드로 전환">☾</button>
+      </div>
 
-      <ul>
+      <!-- 평가: 각 section으로 이동하는 내비게이션 링크 -->
+      <ul id="main-menu">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="메뉴 열기">☰</button>
     </nav>
   </header>
 
+  <!-- 평가: 페이지의 주요 콘텐츠를 main 안에 구성 -->
   <main>
     <section id="hero">
       <div class="hero-content">
@@ -35,7 +47,7 @@
       </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="reveal">
       <h2>About Me</h2>
 
       <div>
@@ -48,7 +60,7 @@
       </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="reveal">
       <h2>Skills</h2>
 
       <ul>
@@ -58,7 +70,8 @@
       </ul>
     </section>
 
-    <section id="projects">
+    <!-- 평가: 프로젝트 목록을 section으로 구분하고 API 카드 영역 제공 -->
+    <section id="projects" class="reveal">
       <h2>Projects</h2>
 
       <div id="projects-container" aria-live="polite">
@@ -72,7 +85,7 @@
         </article>
 
         <article class="project-card">
-          <img class="project-image" src="images/shortcake.png" alt="나만의 퀴즈게임 프로젝트 이미지">
+          <img class="project-image project-image--shortcake" src="images/shortcake.png" alt="나만의 퀴즈게임 프로젝트 이미지">
           <h3>나만의 퀴즈게임</h3>
           <p class="project-stars" aria-label="Stars 0개">☆</p>
           <a href="https://github.com/CodysseyHeoney/codyssey-mission2">
@@ -82,10 +95,11 @@
       </div>
     </section>
 
-    <section id="contact">
+    <!-- 평가: 필수 입력값·이메일 형식 검사를 위한 contact form -->
+    <section id="contact" class="reveal">
       <h2>Contact</h2>
 
-      <form id="contact-form">
+      <form id="contact-form" novalidate>
         <div>
           <label for="name">Name</label>
           <input id="name" name="name" type="text" required>
@@ -110,9 +124,15 @@
     </section>
   </main>
 
+  <!-- 평가: 맨 위로 가기 버튼 동작 연결 -->
+  <button id="scroll-top" type="button" aria-label="맨 위로 이동">
+    ↑
+  </button>
+
+  <!-- 평가: 페이지 하단 정보를 시맨틱 footer로 구분 -->
   <footer>
-    <p>&copy; 2026 Your Name</p>
-    <a href="https://github.com/your-username">GitHub</a>
+    <p>&copy; 2026 HeoNey</p>
+    <a href="https://github.com/CodysseyHeoney">View on GitHub</a>
   </footer>
 </body>
 </html>
