@@ -497,6 +497,17 @@ footer a {
   }
 }
 
+/* 평가: 버튼에 hover 효과와 transition 적용 */
+button {
+  transition: color 160ms ease, background-color 160ms ease,
+    transform 160ms ease;
+}
+
+button:hover {
+  color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
 #scroll-top {
   position: fixed;
   right: 20px;

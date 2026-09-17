@@ -27,11 +27,11 @@ async function loadProjects() {
     }
 
     const repositories = await response.json();
-    // 평가: filter로 필요한 저장소만 선택
+    // 평가: filter와 구조 분해 할당으로 필요한 저장소만 선택
     const targetRepositories = repositories.filter(
-      (repository) =>
-        repository.name === "codyssey-mission1" ||
-        repository.name === "codyssey-mission2"
+      ({ name }) =>
+        name === "codyssey-mission1" ||
+        name === "codyssey-mission2"
     );
     state.projects = targetRepositories;
     state.projectsStatus =
@@ -50,7 +50,7 @@ function retryProjects() {
 }
 
 function renderProjects() {
-  // 평가: loading·error·empty·success 상태에 따라 화면 업데이트
+  // 평가: loading·error·empty·success 상태와 재시도 UI에 따라 화면 업데이트
   if (state.projectsStatus === "loading") {
     projectsContainer.textContent = "프로젝트를 불러오는 중 ...";
     return;

@@ -51,7 +51,7 @@
 
 - [등장 애니메이션을 적용할 섹션](../index.html#L50-L99)
 - [등장 전·후 애니메이션 상태](../css/style.css#L45-L55)
-- [등장 애니메이션 대상 선택](../js/main.js#L206-L209)
+- [등장 애니메이션 대상 선택](../js/main.js#L208-L209)
 - [IntersectionObserver와 is-visible 클래스 추가](../js/main.js#L210-L225)
 - [스크롤 위치에 따른 헤더 상태 변경](../js/main.js#L206-L240)
 - [스크롤 상태에 따른 헤더 CSS](../css/style.css#L70-L107)
@@ -98,6 +98,7 @@
 
 - [`async` 함수와 `try/catch`](../js/main.js#L20-L43)
 - [`filter`로 두 프로젝트 선택](../js/main.js#L29-L38)
+- [구조 분해 할당으로 저장소 이름 추출](../js/main.js#L30-L35)
 - [`map`으로 카드 HTML 생성](../js/main.js#L76-L102)
 - [`join`과 `innerHTML`로 화면 반영](../js/main.js#L104-L105)
 

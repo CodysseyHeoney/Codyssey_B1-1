@@ -59,10 +59,10 @@
 
 현재 관련 코드:
 
-- [`header`와 `nav`의 Flexbox 적용](../css/style.css#L84-L89)
-- [`Skills` 목록의 Flexbox 적용](../css/style.css#L318-L326)
-- [`Projects` 카드 목록의 Grid 적용](../css/style.css#L352-L360)
-- [`Project` 카드 내부의 Grid 적용](../css/style.css#L362-L374)
+- [`header`와 `nav`의 Flexbox 적용](../css/style.css#L110-L115)
+- [`Skills` 목록의 Flexbox 적용](../css/style.css#L345-L353)
+- [`Projects` 카드 목록의 Grid 적용](../css/style.css#L379-L387)
+- [`Project` 카드 내부의 Grid 적용](../css/style.css#L389-L402)
 
 최종 정리 때 비교할 내용:
 
@@ -75,12 +75,13 @@
 
 관련 코드:
 
-- [Skills 카드 기본 스타일](../css/style.css#L328-L342)
-- [Skills 카드 hover 효과](../css/style.css#L344-L347)
-- [Projects 카드 Grid와 내부 Grid](../css/style.css#L349-L374)
-- [Projects 카드 기본 스타일과 hover 효과](../css/style.css#L362-L392)
-- [Projects GitHub 링크 스타일](../css/style.css#L400-L406)
-- [Projects 별 글꼴 스타일](../css/style.css#L408-L411)
+- [Skills 카드 기본 스타일](../css/style.css#L355-L369)
+- [Skills 카드 hover 효과](../css/style.css#L371-L374)
+- [Projects 카드 Grid와 내부 Grid](../css/style.css#L376-L402)
+- [Projects 카드 기본 스타일과 hover 효과](../css/style.css#L389-L418)
+- [Projects GitHub 링크 스타일](../css/style.css#L426-L432)
+- [Projects 별 글꼴 스타일](../css/style.css#L434-L437)
+- [버튼 hover와 transition](../css/style.css#L500-L509)
 
 정리할 내용:
 
@@ -108,5 +109,5 @@
 - [x] Projects 카드 목록에 `auto-fit`, `minmax()` Grid를 적용했는가?
 - [x] Projects 카드 내부에 Grid를 적용했는가?
 - [x] Projects 카드에 hover, transition, box-shadow를 적용했는가?
-- [ ] 버튼에 hover와 transition을 적용했는가?
-- [ ] 모바일·태블릿·데스크톱 반응형 규칙을 작성했는가?
+- [x] 버튼에 hover와 transition을 적용했는가?
+- [x] 모바일·태블릿·데스크톱 반응형 규칙을 작성했는가?
