@@ -2,7 +2,7 @@
 
 const themeToggle = document.querySelector("#theme-toggle");
 
-// 평가: 테마·메뉴·프로젝트 상태를 하나의 state 객체에서 관리
+// 브라우저에 저장한 theme 값이 있으면 가져오고, 없으면 light를 기본값으로 설정
 const state = {
   theme: localStorage.getItem("theme") || "light",
   menuOpen: false,
@@ -101,13 +101,14 @@ function renderProjects() {
     `;
   });
 
-  // 평가: join과 innerHTML로 카드 배열을 Projects 영역에 표시
+  // join과 innerHTML로 카드 배열을 Projects 영역에 표시
   projectsContainer.innerHTML = projectCards.join("");
 }
 
+// applyTheme: 현재 상태가 dark이면 data-theme 속성을 body에 추가하고, light이면 제거
 function applyTheme() {
   const isDark = state.theme === "dark";
-
+  // isDark가 true이면 data-theme="dark"를 body에 추가하고, false이면 제거
   if (isDark) {
     document.body.setAttribute("data-theme", "dark");
   } else {
@@ -120,7 +121,7 @@ function applyTheme() {
     isDark ? "라이트 모드로 전환" : "다크 모드로 전환"
   );
 }
-
+// 버튼 클릭 -> 현재 테마 반대로 변경 localStorage에 저장 -> applyTheme()로 화면 업데이트
 function toggleTheme() {
   state.theme = state.theme === "dark" ? "light" : "dark";
   localStorage.setItem("theme", state.theme);

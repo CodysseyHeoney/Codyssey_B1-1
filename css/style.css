@@ -1,6 +1,6 @@
 /* 2단계-1: 전체 페이지 기본 설정 */
 
-/* 평가: CSS 변수로 색상·폰트·간격을 한곳에서 관리 */
+/* CSS 변수로 색상·폰트·간격을 한곳에서 관리 */
 :root {
   --color-background: #f7f5f0;
   --color-surface: #f0ede5;
@@ -374,7 +374,6 @@ footer a {
 }
 
 /* 평가: Projects 카드는 Grid(auto-fit/minmax)로 반응형 배치하고 내부도 Grid로 구성 */
-/* 2단계-7: Projects 카드 Grid */
 
 #projects-container {
   display: grid;
@@ -463,25 +462,30 @@ footer a {
   }
 }
 
-/* 평가: 모바일 기본값을 먼저 작성하고 768px 이상에서 데스크톱으로 확장 */
-/* 모바일 기본값은 위에 작성하고, 768px 이상에서 데스크톱 레이아웃으로 확장합니다. */
+
+/* 모바일 기본값을 작성, 화면 너비가 768px 이하면 아래 디자인을 적용 */
 
 @media (max-width: 767px) {
+  /* header 안에 nav 선택 position: relative 이요소를 기준점으로
+  flex-wrap: nowrap메뉴요소들이 여러줄 아닌 한줄로 적용 */
   header > nav {
     position: relative;
     flex-wrap: nowrap;
   }
 
   #menu-toggle {
+    /*햄버거 버튼을 화면에 보여줌, 버튼을 오른쪽으로, 위로 2px 이동*/
     display: block;
     margin-left: auto;
     transform: translateY(-2px);
   }
 
   #menu-toggle[aria-expanded="true"] {
+    /* 햄버거 버튼이 클릭되어 메뉴가 열리면 버튼을 숨김 */
     display: none;
   }
 
+  /* 모바일에서 메뉴 처음에 숨김 */
   header nav ul {
     display: none;
     flex-direction: row;
@@ -491,6 +495,7 @@ footer a {
     padding: 0;
   }
 
+  /* js가 is-open 클래스 추가해서 메뉴가 열리면 flex로 보여주고 오른쪽으로 정렬 */
   header nav ul.is-open {
     display: flex;
     margin-left: auto;
